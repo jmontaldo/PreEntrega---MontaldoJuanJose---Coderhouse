@@ -1,0 +1,21 @@
+{% extends 'Core/inicio.html' %}
+
+    {% block title %}
+
+        Alta de pasajero
+
+    {% endblock title %}
+
+    {% block contenido %}
+
+    <div class="container mt-4">
+        <h1 class="mb-4">ALTA DE PASAJERO</h1>
+        <p>Complete el siguiente formulario:</p>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <!-- Agrega la clase "btn btn-primary" para dar estilo al botón -->
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+    {% endblock contenido %}

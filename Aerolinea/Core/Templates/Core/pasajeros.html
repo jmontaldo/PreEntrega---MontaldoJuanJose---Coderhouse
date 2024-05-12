@@ -1,0 +1,22 @@
+{% extends 'Core/inicio.html' %}
+
+    {% block title %}
+
+        Clientes
+
+    {% endblock title %}
+
+    {% block contenido %}
+
+    <h1 class="mt-4">PASAJEROS</h1>
+        <p>Lista de pasajeros: </p>
+        <div class="container mt-5">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <th>Nombre</th><th>Apellido</th><th>Documento</th>
+                    {% for pasajero in pasajeros %}
+                        <tr><td>{{ pasajero.nombre}}</td><td>{{pasajero.apellido}}<td>{{pasajero.numero_documento}}</td></tr>
+                    {% endfor %}
+            </table>
+        <a href="{% url 'clientes:create' %}">Darse de alta</a>
+    {% endblock contenido %}

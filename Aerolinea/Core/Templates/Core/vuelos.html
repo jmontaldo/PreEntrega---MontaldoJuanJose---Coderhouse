@@ -1,0 +1,22 @@
+{% extends 'Core/inicio.html' %}
+
+    {% block title %}
+
+        Vuelos
+
+    {% endblock title %}
+
+    {% block contenido %}
+
+    <h1 class="mt-4">PRÓXIMOS VUELOS</h1>
+        <p>Puedes ver los vuelos disponibles en la tabla: </p>
+        <div class="container mt-5">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <th>Vuelo</th><th>Origen</th><th>Destino</th>
+                    {% for vuelo in vuelos %}
+                        <tr><td>{{ vuelo.codigo}}</td><td>{{vuelo.origen}}<td>{{vuelo.destino}}</td></tr>
+                    {% endfor %}
+            </table>
+    <a href="{% url 'clientes:clientes' %}">Ver pasajeros</a>
+    {% endblock contenido %}
