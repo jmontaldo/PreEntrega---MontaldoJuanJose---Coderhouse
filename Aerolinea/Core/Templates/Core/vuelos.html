@@ -18,5 +18,10 @@
                         <tr><td>{{ vuelo.codigo}}</td><td>{{vuelo.origen}}<td>{{vuelo.destino}}</td></tr>
                     {% endfor %}
             </table>
-    <a href="{% url 'clientes:clientes' %}">Ver pasajeros</a>
+        <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+                <a href="{% url 'vuelos:create' %}" style="color: white; text-decoration: none;">Agregar vuelos</a>
+        </button>
+        <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+            <a href="{% url 'clientes:clientes' %}" style="color: white; text-decoration: none;">Ver pasajeros</a>
+        </button
     {% endblock contenido %}

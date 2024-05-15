@@ -18,5 +18,7 @@
                         <tr><td>{{ pasajero.nombre}}</td><td>{{pasajero.apellido}}<td>{{pasajero.numero_documento}}</td></tr>
                     {% endfor %}
             </table>
-        <a href="{% url 'clientes:create' %}">Darse de alta</a>
+        <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+            <a href="{% url 'clientes:create' %}" style="color: white; text-decoration: none;">Agregar pasajero</a>
+        </button>
     {% endblock contenido %}
