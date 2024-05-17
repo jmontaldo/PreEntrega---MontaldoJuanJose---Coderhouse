@@ -4,7 +4,6 @@ class Clientes(models.Model):
     nombre = models.CharField(max_length=100, blank= False)
     apellido = models.CharField(max_length=100, blank= False)
     numero_documento = models.IntegerField(unique= True, blank= False)
-    mail = models.CharField(max_length=100, blank= False)
 
     def __str__(self) -> str:
-        return f"{self.nombre}, {self.apellido}, {self.numero_documento}, {self.mail}"
+        return f"{self.nombre}, {self.apellido}, {self.numero_documento}"

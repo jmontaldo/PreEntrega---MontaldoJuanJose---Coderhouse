@@ -5,7 +5,7 @@ from Clientes.forms import ClienteForm
 def clientes(request):
     consulta = Clientes.objects.all()
     contexto = {"pasajeros": consulta}
-    return render(request, "Core/pasajeros.html", contexto)
+    return render(request, "Clientes/pasajeros.html", contexto)
 
 def cliente_create(request):
     if request.method == "POST":
@@ -15,4 +15,4 @@ def cliente_create(request):
             return redirect("clientes:clientes")
     else:
         form = ClienteForm()
-    return render(request, "Core/pasajeros_create.html", {"form":form})
+    return render(request, "Clientes/pasajeros_create.html", {"form":form})

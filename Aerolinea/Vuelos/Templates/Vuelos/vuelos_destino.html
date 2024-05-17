@@ -1,0 +1,21 @@
+{% extends 'Core/inicio.html' %}
+
+    {% block title %}
+
+        Vuelos comprados
+
+    {% endblock title %}
+
+    {% block contenido %}
+    <h1 class="mt-4">{{vuelos_destino.nombre}}</h1>
+        <div class="container mt-5">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <th>Destino</th><th>Descripción</th>
+                        <tr><td>{{vuelos_destino.nombre}}</td><td>{{vuelos_destino.descripcion}}</tr>
+            </table>
+        </div>
+            <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+                <a href="{% url 'vuelos:vuelos' %}" style="color: white; text-decoration: none;">Volver</a>
+            </button>
+    {% endblock contenido %}

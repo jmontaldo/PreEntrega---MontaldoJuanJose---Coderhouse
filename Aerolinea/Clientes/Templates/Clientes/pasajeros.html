@@ -15,7 +15,7 @@
               <thead class="thead-dark">
                 <th>Nombre</th><th>Apellido</th><th>Documento</th>
                     {% for pasajero in pasajeros %}
-                        <tr><td>{{ pasajero.nombre}}</td><td>{{pasajero.apellido}}<td>{{pasajero.numero_documento}}</td></tr>
+                        <tr><td>{{pasajero.nombre}}</td><td>{{pasajero.apellido}}<td>{{pasajero.numero_documento}}</td></tr>
                     {% endfor %}
             </table>
         <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
