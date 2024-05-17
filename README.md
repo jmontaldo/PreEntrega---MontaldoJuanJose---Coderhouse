@@ -1,6 +1,9 @@
 Superuser: Admin / Admin
 
-En la barra de navegación izquierda, seleccionar el menú "Vuelos" para ver los vuelos disponibles. Dentro
-de esta página, también se puede acceder al menú de los pasajeros, donde podes sumar personas al vuelo.
+En la barra de navegación izquierda, seleccionar el menú "Vuelos" para ver los vuelos disponibles y "Clientes" para ver la lista de pasajeros. 
+
+En "Vuelos" está el detalle con información de los destinos.
+
+Se pueden agregar nuevos vuelos y nuevos pasajeros.
 
 Para volver al inicio, se utiliza el menú en la parte superior derecha.
