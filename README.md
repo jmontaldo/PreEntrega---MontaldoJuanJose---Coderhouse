@@ -4,6 +4,6 @@ En la barra de navegación izquierda, seleccionar el menú "Vuelos" para ver los
 
 En "Vuelos" está el detalle con información de los destinos.
 
-Se pueden agregar nuevos vuelos y nuevos pasajeros.
+Se pueden agregar nuevos vuelos y nuevos pasajeros. También se pueden eliminar 'pasajeros'.
 
 Para volver al inicio, se utiliza el menú en la parte superior derecha.
