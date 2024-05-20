@@ -16,3 +16,10 @@ def cliente_create(request):
     else:
         form = ClienteForm()
     return render(request, "Clientes/pasajeros_create.html", {"form":form})
+
+def cliente_eliminar(request, documento: int):
+    cliente = Clientes.objects.get(numero_documento = documento)
+    cliente.delete()
+    consulta = Clientes.objects.all()
+    contexto = {"pasajeros": consulta}
+    return render(request, "Clientes/pasajeros.html", contexto)

@@ -15,7 +15,13 @@
               <thead class="thead-dark">
                 <th>Vuelo</th><th>Origen</th><th>Destino</th>
                     {% for vuelo in vuelos %}
-                        <tr><td>{{vuelo.codigo}}</td><td>{{vuelo.origen}}<td>{{vuelo.destino}}</td><td><a href="{% url 'vuelos:vuelos_destino' vuelo.codigo %}">Ver destino</a></td></tr>
+                        <tr><td>{{vuelo.codigo}}</td><td>{{vuelo.origen}}<td>{{vuelo.destino}}</td>
+                            <td>
+                                <button class="button btn-primary"; style="border-radius: 10px; color: white; font-size: 16px; font-family: Arial, sans-serif; background-color: #4CAF50;">
+                                    <a href="{% url 'vuelos:vuelos_destino' vuelo.codigo %}" style="color: aliceblue;">Ver destino</a>
+                                </button>
+                            </td>
+                        </tr>
                     {% endfor %}
             </table>
         <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">

@@ -1,4 +1,5 @@
 {% extends 'Core/inicio.html' %}
+{% load static %}
 
     {% block title %}
 
@@ -7,15 +8,32 @@
     {% endblock title %}
 
     {% block contenido %}
-    <h1 class="mt-4">{{vuelos_destino.nombre}}</h1>
-        <div class="container mt-5">
-            <table class="table table-striped table-bordered">
-              <thead class="thead-dark">
-                <th>Destino</th><th>Descripción</th>
-                        <tr><td>{{vuelos_destino.nombre}}</td><td>{{vuelos_destino.descripcion}}</tr>
-            </table>
-        </div>
-            <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
-                <a href="{% url 'vuelos:vuelos' %}" style="color: white; text-decoration: none;">Volver</a>
-            </button>
+    <h1 style = "margin: 0;" class="mt-2">{{vuelos_destino.nombre}}</h1>
+            <p style = "margin: 0;" class="mt-2">
+                {{vuelos_destino.descripcion}}
+            </p>
+        {% if vuelos_destino.nombre == "Montevideo" %}
+            <div class="container mt-3"></div>
+                <img src="{% static 'core/Montevideo.webp' %}" alt="Montevideo" width="600" height="300">
+            </div>
+        {% elif vuelos_destino.nombre == "Nueva York" %}
+            <div class="container mt-3"></div>
+                <img src="{% static 'core/NuevaYork.jpeg' %}" alt="Nueva York" width="600" height="300">
+            </div>
+        {% elif vuelos_destino.nombre == "La Paz" %}
+            <div class="container mt-3"></div>
+                <img src="{% static 'core/LaPaz.jpg' %}" alt="La Paz" width="600" height="300">
+            </div>
+        {% elif vuelos_destino.nombre == "Asunción" %}
+            <div class="container mt-3"></div>
+                <img src="{% static 'core/Asuncion.jpg' %}" alt="Asuncion" width="600" height="300">
+            </div>
+        {% elif vuelos_destino.nombre == "Caracas" %}
+            <div class="container mt-3"></div>
+                <img src="{% static 'core/Caracas.jpg' %}" alt="Caracas" width="600" height="300">
+            </div>
+        {% endif %}
+        <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 20px 10px; cursor: pointer;">
+            <a href="{% url 'vuelos:vuelos' %}" style="color: white; text-decoration: none;">Volver</a>
+        </button>
     {% endblock contenido %}
