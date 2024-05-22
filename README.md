@@ -6,4 +6,6 @@ En "Vuelos" está el detalle con información de los destinos.
 
 Se pueden agregar nuevos vuelos y nuevos pasajeros. También se pueden eliminar 'pasajeros'.
 
+En ambos menús, se pueden realizar búsquedas de los datos.
+
 Para volver al inicio, se utiliza el menú en la parte superior derecha.

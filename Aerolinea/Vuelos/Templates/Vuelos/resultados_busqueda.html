@@ -8,8 +8,8 @@
 
     {% block contenido %}
     <body style="background-color: rgb(233, 239, 246);"></body>
-    <h1 class="mt-4">PRÓXIMOS VUELOS</h1>
-        <p>Puedes ver los vuelos disponibles en la tabla: </p>
+    <h1 class="mt-4">DESTINOS</h1>
+        <p>Estos son los vuelos encontrados: </p>
         <div class="container mt-5">
             <table style = "background-color: white;" class="table table-striped table-bordered">
               <thead class="thead-dark">
@@ -25,10 +25,10 @@
                     {% endfor %}
             </table>
         <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
-                <a href="{% url 'vuelos:create' %}" style="color: white; text-decoration: none;">Agregar vuelos</a>
+                <a href="{% url 'vuelos:search' %}" style="color: white; text-decoration: none;">Buscar</a>
         </button>
         <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
-            <a href="{% url 'vuelos:search' %}" style="color: white; text-decoration: none;">Buscar</a>
-    </button>
+            <a href="{% url 'vuelos:vuelos' %}" style="color: white; text-decoration: none;">Volver</a>
+        </button>
     </body>
     {% endblock contenido %}

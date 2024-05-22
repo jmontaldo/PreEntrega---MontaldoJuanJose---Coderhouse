@@ -7,6 +7,20 @@ def vuelos(request):
     contexto = {"vuelos": consulta}
     return render(request, "Vuelos/vuelos.html", contexto)
 
+def vuelos_buscar(request):
+    return render(request, "Vuelos/vuelos_busqueda.html")
+
+def buscar(request):
+    if request.GET['destino']:
+        destino = request.GET['destino']
+        vuelos = Vuelos.objects.filter(destino__icontains = destino)
+        contexto = {"vuelos": vuelos}
+        return render(request, "Vuelos/resultados_busqueda.html", contexto)
+    else:
+        vuelos = ""
+        contexto = {"vuelos": vuelos}
+        return render(request, "Vuelos/resultados_busqueda.html", contexto)
+
 def vuelos_create(request):
     if request.method == "POST":
         form = VuelosForm(request.POST)
