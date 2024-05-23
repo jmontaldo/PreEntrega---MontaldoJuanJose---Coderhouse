@@ -4,7 +4,11 @@
         Aerolineas X
     {% endblock title %}
     {% block contenido %}
+        {% if user.is_authenticated %}
+        <h1 class="mt-4">¡Bienvenido a Aerolineas X, {{user.username}}!</h1>
+        {% else %}
         <h1 class="mt-4">¡Bienvenido a Aerolineas X!</h1>
+        {% endif %}
         <body style="background-color: rgb(233, 239, 246);">
             <div id="myCarousel" class="carousel slide; mt-3" data-ride="carousel">
                 <div class="carousel-inner">

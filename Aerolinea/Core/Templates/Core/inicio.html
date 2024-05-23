@@ -21,8 +21,11 @@
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">Aerolineas X</div>
                 <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'core:inicio' %}">Inicio</a>
+                    {% if user.is_authenticated %}
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'vuelos:vuelos' %}">Vuelos</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'clientes:clientes' %}">Pasajeros</a>
+                    {% endif %}
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -32,7 +35,22 @@
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="{% url 'core:inicio' %}">Inicio</a></li>
+                                {% if user.is_authenticated %}
+                                <li class="nav-item active"><a style="color:black; border-radius: 50%;" class="nav-link">{{user.username}}</a></li>
+                                <li class="nav-item active">
+                                    <form action="{% url 'core:logout' %}" method="post">
+                                            {% csrf_token %}
+                                        <button type="submit" class="btn btn-dark">Logout</button>
+                                    </form>
+                                </li>
+                                {% else %}
+                                <li class="nav-item active" style="background-color: black; border-radius: 0%;">
+                                    <a class="nav-link" style="color: white;" href="{% url 'core:login' %}">Login</a>
+                                </li>
+                                <li class="nav-item active" style="background-color: black; border-radius: 0%;">
+                                    <a class="nav-link" style="color: white;" href="{% url 'core:registrar' %}">Registrarse</a>
+                                </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>

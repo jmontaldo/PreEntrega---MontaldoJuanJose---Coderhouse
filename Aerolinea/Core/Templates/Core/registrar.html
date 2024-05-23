@@ -1,0 +1,28 @@
+{% extends 'Core/inicio.html' %}
+{% load static %}
+    {% block title %}
+        Registrarse
+    {% endblock title %}
+    {% block contenido %}
+        <h1 class="mt-1">Registrarse</h1>
+        <body style="background-color: rgb(233, 239, 246);">
+            <div class="container" 
+                 style="max-width: 400px;
+                        margin: auto;
+                        padding: 60px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #f9f9f9">
+            <form method="post">
+                {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+                <p></p>
+                <input type="hidden" name="next" value="{% url 'core:inicio' %}">
+                <button type="submit" class="btn btn-primary" style="color:white; background-color: black;">Registrarse</button>
+                <a href="{% url 'core:inicio' %}" class="btn btn-primary" style="color: white; background-color: black;">Cancelar</a>
+            </form>
+            </div>
+        </body>
+    {% endblock contenido %}
