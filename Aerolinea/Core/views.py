@@ -5,6 +5,9 @@ from .forms import CustomAutenthicationForm, CustomUserCreationForm
 def inicio (request):
     return render (request, "Core/index.html")
 
+def about(request):
+    return render (request, "Core/about.html")
+
 class CustomLoginView(LoginView):
     authentication_form = CustomAutenthicationForm
     template_name = "Core/login.html"

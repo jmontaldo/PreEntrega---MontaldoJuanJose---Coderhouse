@@ -10,3 +10,7 @@ Se pueden agregar nuevos vuelos y nuevos pasajeros. También se pueden eliminar 
 En ambos menús, se pueden realizar búsquedas de los datos.
 
 Para volver al inicio, se utiliza el menú en la parte superior derecha.
+
+El proyecto cuenta con login, registro y logout de usuarios.
+
+También tiene una página 'about' con información sobre el proyecto y el creador.
