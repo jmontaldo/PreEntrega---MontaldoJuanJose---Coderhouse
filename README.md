@@ -1,4 +1,5 @@
 Superuser: Admin / Admin
+Usuario generico: Test / Administrator
 
 En la barra de navegación izquierda, seleccionar el menú "Vuelos" para ver los vuelos disponibles y "Clientes" para ver la lista de pasajeros. 
 
