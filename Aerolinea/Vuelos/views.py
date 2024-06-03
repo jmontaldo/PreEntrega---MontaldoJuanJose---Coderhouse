@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from Vuelos.models import Vuelos, Destinos
-from Vuelos.forms import VuelosForm
+from Vuelos.forms import VuelosForm, DestinosForm
 
 def vuelos(request):
     consulta = Vuelos.objects.all()
@@ -26,10 +26,20 @@ def vuelos_create(request):
         form = VuelosForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("vuelos:vuelos")
+            return redirect("vuelos:destinos_create")
     else:
         form = VuelosForm()
-    return render(request, "Vuelos/vuelos_create.html", {"form":form})
+    return render(request, "Vuelos/vuelos_create.html", {"form": form})
+
+def destinos_create(request):
+    if request.method == "POST":
+        form = DestinosForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("vuelos:vuelos")
+    else:
+        form = DestinosForm()
+    return render(request, "Vuelos/destinos_create.html", {"form": form})
 
 def vuelos_destino(request, pk: int):
     consulta = Destinos.objects.get(id=pk)

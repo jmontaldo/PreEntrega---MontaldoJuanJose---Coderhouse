@@ -12,23 +12,23 @@
             <p style = "margin: 0;" class="mt-2">
                 {{vuelos_destino.descripcion}}
             </p>
-        {% if vuelos_destino.nombre == "Montevideo" %}
+        {% if vuelos_destino.id == 1 %}
             <div class="container mt-3"></div>
                 <img src="{% static 'core/Montevideo.webp' %}" alt="Montevideo" width="600" height="300">
             </div>
-        {% elif vuelos_destino.nombre == "Nueva York" %}
+        {% elif vuelos_destino.id == 2 %}
             <div class="container mt-3"></div>
                 <img src="{% static 'core/NuevaYork.jpeg' %}" alt="Nueva York" width="600" height="300">
             </div>
-        {% elif vuelos_destino.nombre == "La Paz" %}
+        {% elif vuelos_destino.id == 3 %}
             <div class="container mt-3"></div>
                 <img src="{% static 'core/LaPaz.jpg' %}" alt="La Paz" width="600" height="300">
             </div>
-        {% elif vuelos_destino.nombre == "Asunción" %}
+        {% elif vuelos_destino.id == 4 %}
             <div class="container mt-3"></div>
                 <img src="{% static 'core/Asuncion.jpg' %}" alt="Asuncion" width="600" height="300">
             </div>
-        {% elif vuelos_destino.nombre == "Caracas" %}
+        {% elif vuelos_destino.id == 5 %}
             <div class="container mt-3"></div>
                 <img src="{% static 'core/Caracas.jpg' %}" alt="Caracas" width="600" height="300">
             </div>
